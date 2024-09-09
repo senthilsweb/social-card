@@ -101,46 +101,53 @@ Example usage in HTML:
 <img src="http://localhost:3000/profile-card?name=Senthilnathan%20Karuppaiah&email=nathansweb@icloud.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1713628953/senthilsweb.com/abstract-pattern-indigo_cmo4fm.png" />
 ```
 
-## **API Endpoints**
+### **QR Code Generation API**
 
-### **POST /api/qr/generate**
+This API dynamically generates a QR code as a PNG image based on the query parameters provided in the request.
 
-Generates a QR code for embedding in social cards.
+### **Endpoint**
 
-- **URL:** `/api/qr/generate`
-- **Method:** `POST`
-- **Content-Type:** `application/json`
+- **URL:** `/api/qr/code`
+- **Method:** `GET`
+- **Response Type:** `image/png`
 
-### **Request Payload**
+### **Query Parameters**
 
-```json
-{
-  "text": "Your text or URL here"
-}
+The API accepts several query parameters that control the content and appearance of the QR code.
+
+| Parameter     | Type   | Description                                                                                                    | Default Value                      |
+| ------------- | ------ | -------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| `cht`         | string | Type of chart to generate. Always set to `"qr"` for QR code generation.                                          | `qr`                               |
+| `chs`         | string | Size of the QR code in pixels, formatted as `widthxheight` (e.g., `150x150`).                                   | `150x150`                          |
+| `chl`         | string | The data to encode within the QR code (e.g., a URL or text).                                                    | `https://www.senthilsweb.com`      |
+| `choe`        | string | The character encoding for the QR code content. Supported values include `UTF-8`.                               | `UTF-8`                            |
+| `chld`        | string | The error correction level and margin, formatted as `L|4` (error correction level `L`, margin size `4`).        | `L|4` (low error correction, margin 4 pixels) |
+
+### **Example Usage**
+
+```http
+GET /api/qr/code?cht=qr&chs=200x200&chl=https://www.senthilsweb.com&choe=UTF-8&chld=M|6
 ```
 
-- **text**: The content you want to encode into the QR code.
+This request will generate a 200x200 QR code that encodes the URL `https://www.senthilsweb.com` with medium error correction and a margin of 6 pixels.
 
 ### **Response**
 
+The API returns the QR code as a PNG image directly in the response.
+
 #### **Successful Response**
 
-If the request is successful, the API returns a base64-encoded QR code.
+- **Content-Type:** `image/png`
+- **Status Code:** `200 OK`
+- The response will be a PNG image of the generated QR code that can be embedded or downloaded.
+
+#### **Error Handling**
+
+If an error occurs during QR code generation, it will be logged, and the server will return a status code of `500 Internal Server Error` with a generic error message.
 
 ```json
 {
-  "qrCode": "data:image/png;base64,iVBORw..."
-}
-```
-
-#### **Validation Error Response**
-
-If the `text` field is missing or invalid, the API returns a validation error response with a 400 status code.
-
-```json
-{
-  "error": "Text is required.",
-  "message": "Please provide valid text for QR code generation."
+  "error": "Failed to return content."
 }
 ```
 
