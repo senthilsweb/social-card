@@ -41,7 +41,7 @@ export async function GET(request: Request) {
         {/* Bottom Right Section with QR Code */}
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <img
-            src={`http://localhost:3000/api/qr/code?chl=${encodeURIComponent(website)}&chs=200x200&chld=M|2`}
+            src={`https://social-card-five.vercel.app/api/qr/code?chl=${encodeURIComponent(website)}&chs=200x200&chld=M|2`}
             alt="QR Code"
             style={{
               width: '100px',
