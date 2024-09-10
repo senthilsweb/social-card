@@ -76,7 +76,9 @@ http://localhost:3000/profile-card?name=<name>&email=<email>&mobile=<mobile>&tit
 Here is an example URL that generates a social card for a user:
 
 ```bash
-http://localhost:3000/profile-card?name=Senthilnathan%20Karuppaiah&email=nathansweb@icloud.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1713628953/senthilsweb.com/abstract-pattern-indigo_cmo4fm.png
+# Purple color background
+http://localhost:3000/profile-card?name=Senthilnathan%20Karuppaiah&email=senthilnathan@email.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_color=teal
+
 ```
 
 ![Profile card](public/profile-card-senthilnathan.png)
@@ -89,6 +91,7 @@ http://localhost:3000/profile-card?name=Senthilnathan%20Karuppaiah&email=nathans
 - `title`: The person's job title.
 - `profile_image_url`: A publicly accessible URL to the profile image.
 - `website`: A publicly accessible URL to the website or blog.
+- `bg_color`: Tailwind css colors[indigo, orange, pink, yellow, teal, green], the default is indigo.
 
 
 ### **Usage**
