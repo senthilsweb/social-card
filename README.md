@@ -82,6 +82,15 @@ http://localhost:3000/profile-card?name=Senthilnathan%20Karuppaiah&email=senthil
 https://social-card-five.vercel.app/profile-card?name=Senthilnathan%20Karuppaiah&email=senthilnathan@email.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_color=teal
 ```
 
+<img src="https://social-card-five.vercel.app/profile-card?name=Senthilnathan%20Karuppaiah&email=senthilnathan@email.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_color=indigo" alt="Profile indigo" />
+
+<img src="https://social-card-five.vercel.app/profile-card?name=Senthilnathan%20Karuppaiah&email=senthilnathan@email.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_color=teal" alt="Profile team" />
+
+<img src="https://social-card-five.vercel.app/profile-card?name=Senthilnathan%20Karuppaiah&email=senthilnathan@email.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_color=yellow" alt="Profile yellow" />
+
+<img src="https://social-card-five.vercel.app/profile-card?name=Senthilnathan%20Karuppaiah&email=senthilnathan@email.com&mobile=%2B1%20222-222-2222&title=Solutions%20Architect&profile_image_url=https://res.cloudinary.com/nathansweb/image/upload/v1626488903/profile/Senthil-profile-picture-01_al07i5.jpg&website=www.senthilsweb.com&bg_color=pink" alt="Profile pink" />
+
+**With Background image**
 ![Profile card](public/profile-card-senthilnathan.png)
 
 ### **Parameters**
